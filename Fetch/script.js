@@ -21,3 +21,14 @@ const users = async () => {
 }
 
 users()
+
+new Promise((resolve, reject) => {
+    fetch('https://api.github.com/users/anwishtaghosh')
+    .then(response => {
+        if (!response.ok) {
+            reject("Error!!!!!!!")
+        }
+        return response.json();
+    })
+}).then(data => console.log(data))
+.catch(err => console.log(err))
