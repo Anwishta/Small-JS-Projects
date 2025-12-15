@@ -3,8 +3,7 @@ const user = {
     isLoggedIn: true,
     signedInCount: 4,
     getUsers: function(){
-        console.log(this.name);
-        
+        console.log(this.name);      
     }
 }
 
